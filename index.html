@@ -1,35 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=7, initial-scale=1.0">
-    <title>Lista de Tarefas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=7, initial-scale=1.0">
+  <title>Lista de Tarefas</title>
 </head>
 <body>
-    <main>
-        <div class="inputContainer">
-            <form action="">
-                <legend>Adicionar tarefa</legend>
-                <label for="taskName">Nome</label>
-                <input type="text" name="taskName" id="taskName">
+  <main>
+    <div class="inputContainer">
+      <form id="taskForm">
+        <legend>Adicionar tarefa</legend>
 
-                <label for="taskDescription">Descrição</label>
-                <textarea name="taskDescription" id="taskDescription"></textarea>
+        <label for="taskName">Nome</label>
+        <input type="text" name="taskName" id="taskName" required>
 
-                <input type="submit" value="Adicionar">
-            </form>
-        </div>
-        <div class="listContainer">
-            <!-- Adicionar tasks aqui -->
-            <!--
-            <div>
-                <h3 class="task__name"></h3>
-                <p class="task__description"></p>
-                <button class="task__toogleDone"></button>
-                <button class="task__deleteBtn"></button>
-            </div>
-            -->
-        </div>
-    </main>
+        <label for="taskDescription">Descrição</label>
+        <textarea name="taskDescription" id="taskDescription" required></textarea>
+
+        <input type="submit" value="Adicionar">
+      </form>
+    </div>
+
+    <div class="listContainer" id="listContainer">
+      <!-- Tarefas -->
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  
 </body>
 </html>
