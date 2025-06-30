@@ -1,2 +1,2 @@
-# trabalho-gestao-de-projetos
-To-do list
+Trabalho de gestão: Lista de tarefas
+Divisão de funções e colaboração.
