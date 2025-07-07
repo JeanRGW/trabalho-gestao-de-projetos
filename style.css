@@ -1,0 +1,195 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top of the container */
+    min-height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding: 20px; /* Add some padding around the content */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+main {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px; /* Space from the top */
+}
+
+/* --- Form Styling --- */
+.inputContainer {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+#taskForm legend {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#taskForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+#taskForm input[type="text"],
+#taskForm textarea {
+    width: calc(100% - 20px); /* Account for padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+#taskForm input[type="text"]:focus,
+#taskForm textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+#taskForm textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 80px;
+}
+
+#taskForm input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+#taskForm input[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+#taskForm input[type="submit"]:active {
+    background-color: #004085;
+    transform: translateY(0);
+}
+
+/* --- Task List Styling --- */
+.listContainer {
+    padding-top: 10px;
+}
+
+.task {
+    background-color: #fdfdfd;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task__name {
+    font-size: 1.4em;
+    color: #2c3e50;
+    margin: 0;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #eee;
+}
+
+.task__description {
+    font-size: 0.95em;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Styling for completed tasks */
+.task__name.done {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task__description.done {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* Action Buttons */
+.task__toggleDone,
+.task__deleteBtn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-top: 5px; /* Space between buttons and task content */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.task__toggleDone {
+    background-color: #28a745; /* Green for complete */
+    color: white;
+}
+
+.task__toggleDone:hover {
+    background-color: #218838;
+    transform: translateY(-1px);
+}
+
+.task__deleteBtn {
+    background-color: #dc3545; /* Red for delete */
+    color: white;
+    margin-left: 10px; /* Space between buttons */
+}
+
+.task__deleteBtn:hover {
+    background-color: #c82333;
+    transform: translateY(-1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    main {
+        padding: 20px;
+        margin-top: 10px;
+    }
+
+    #taskForm input[type="submit"] {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .task {
+        padding: 12px;
+    }
+
+    .task__toggleDone,
+    .task__deleteBtn {
+        padding: 7px 10px;
+        font-size: 0.85em;
+    }
+}

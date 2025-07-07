@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=7, initial-scale=1.0">
+  <title>Lista de Tarefas</title>
+  <link rel="stylesheet" href="style.css"> </head>
+</head>
+<body>
+  <main>
+    <div class="inputContainer">
+      <form id="taskForm">
+        <legend>Adicionar tarefa</legend>
+
+        <label for="taskName">Nome</label>
+        <input type="text" name="taskName" id="taskName" required>
+
+        <label for="taskDescription">Descrição</label>
+        <textarea name="taskDescription" id="taskDescription" required></textarea>
+
+        <input type="submit" value="Adicionar">
+      </form>
+    </div>
+
+    <div class="listContainer" id="listContainer">
+      <!-- Tarefas -->
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
